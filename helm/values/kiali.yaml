@@ -1,0 +1,14 @@
+external_services:
+  prometheus:
+    url: "http://prometheus-kube-prometheus-prometheus.monitoring:9090"
+
+deployment:
+  ingress:
+    enabled: true
+
+server:
+  web_fqdn: "kiali.vcap.me"
+  web_root: /
+
+auth:
+  strategy: "anonymous"

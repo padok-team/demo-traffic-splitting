@@ -1,0 +1,37 @@
+alertmanager:
+  enabled: false
+
+grafana:
+  enabled: false
+
+kubeStateMetrics:
+  enabled: false
+
+nodeExporter:
+  enabled: false
+
+prometheus:
+  prometheusSpec:
+    # Scrape metrics every 5 seconds.
+    scrapeInterval: 5s
+
+    # Watch all PrometheusRules in the cluster.
+    ruleNamespaceSelector:
+      matchLabels: {}
+    ruleSelector:
+      matchLabels: {}
+
+    # Watch all ServiceMonitors in the cluster.
+    serviceMonitorNamespaceSelector:
+      matchLabels: {}
+    serviceMonitorSelector:
+      matchLabels: {}
+
+    # Watch all PodMonitors in the cluster.
+    podMonitorNamespaceSelector:
+      matchLabels: {}
+    podMonitorSelector:
+      matchLabels: {}
+
+  ingress:
+    enabled: false
